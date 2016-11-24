@@ -19,7 +19,7 @@ Install_phpstorm () {
 }
 
 sudo apt-get update
-sudo apt-get upgrade
+sudo apt-get upgrade -y
 
 # add necessary repositories
 sudo add-apt-repository -y ppa:ondrej/php
@@ -35,8 +35,11 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i skypeforlinux-64-alpha.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 
-sudo apt-get install -f
+sudo apt-get install -f -y
 
+if [ ! -d $HOME/.config/autostart ]; then
+    mkdir -p $HOME/.config/autostart
+fi
 cp ./configurations/autostart $HOME/.config/autostart
 
 rm skypeforlinux-64-alpha.deb google-chrome-stable_current_amd64.deb
