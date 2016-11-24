@@ -37,6 +37,8 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 sudo apt-get install -f
 
+cp ./configurations/autostart $HOME/.config/autostart
+
 rm skypeforlinux-64-alpha.deb google-chrome-stable_current_amd64.deb
 
 while true; do
