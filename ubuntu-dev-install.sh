@@ -21,4 +21,19 @@ sudo apt-get install -f
 
 rm skypeforlinux-64-alpha.deb google-chrome-stable_current_amd64.deb
 
+while true; do
+    read -p "Do you wish to install Sublime text 3? [y,n]" yn
+    case $yn in
+        y ) wget https://download.sublimetext.com/sublime-text_build-3126_amd64.deb && sudo dpkg -i sublime-text_build-3126_amd64.deb && rm sublime-text_build-3126_amd64.deb; break;;
+        n ) break;;
+    esac
+done
 
+while true; do
+echo "Do you wish to install apache or nginx?"
+read -p "Do you wish to install apache or nginx? [a,n]" apachenginx
+    case $apachenginx in
+        n ) sudo apt-get install nginx; break;;
+        a ) sudo apt-get install libapache2-mod-php5.6; break;;
+    esac
+done
