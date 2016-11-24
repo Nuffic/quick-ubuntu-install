@@ -33,7 +33,7 @@ sudo add-apt-repository -y ppa:ondrej/mysql-5.6
 sudo apt-add-repository -y ppa:jtaylor/keepass
 sudo apt-get update
 
-sudo apt-get install -y keepass2 guake php5.6-dev php5.6-mysql php5.6-cli php5.6-fpm php5.6-curl php5.6-zip php5.6-soap php5.6-intl php5.6-json php5.6-xml php5.6-mcrypt php5.6-mbstring php-pear mysql-server-5.6 sni-qt sni-qt:i386 git git-flow
+sudo apt-get install -y keepass2 guake php5.6-dev php5.6-mysql php5.6-cli php5.6-fpm php5.6-curl php5.6-zip php5.6-soap php5.6-intl php5.6-json php5.6-xml php5.6-mcrypt php5.6-mbstring php-pear mysql-server-5.6 sni-qt sni-qt:i386 git git-flow xdotool
 
 #install software that is downloadable from the internet
 wget https://repo.skype.com/latest/skypeforlinux-64-alpha.deb
