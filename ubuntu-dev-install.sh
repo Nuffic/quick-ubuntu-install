@@ -14,6 +14,10 @@ Install_st3 () {
     sudo dpkg -i sublime-text_build-3126_amd64.deb
     rm sublime-text_build-3126_amd64.deb
 }
+Install_bash_git_prompt () {
+    #git clone https://github.com/magicmonty/bash-git-prompt.git $HOME/.bash-git-prompt --depth=1
+    cat configurations/bash_git_prompt/bashrc >> $HOME/.bashrc
+}
 # Install_phpstorm () {
 #     #todo
 # }
@@ -22,6 +26,8 @@ Install_composer () {
     php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
     sudo php composer-setup.php --install-dir=/usr/bin --filename=composer
     php -r "unlink('composer-setup.php');"
+
+    cat configurations/composer/composer_path >> $HOME/.profile
 }
 
 sudo apt-get update
@@ -73,6 +79,14 @@ while true; do
 read -p "Do you wish to install composer? [y,n]" yn
     case $yn in
         y ) Install_composer; break;;
+        n ) break;;
+    esac
+done
+
+while true; do
+read -p "Do you wish to install bash-git-prompt? [y,n]" yn
+    case $yn in
+        y ) Install_bash_git_prompt; break;;
         n ) break;;
     esac
 done
