@@ -15,7 +15,7 @@ Install_st3 () {
     rm sublime-text_build-3126_amd64.deb
 }
 Install_bash_git_prompt () {
-    #git clone https://github.com/magicmonty/bash-git-prompt.git $HOME/.bash-git-prompt --depth=1
+    git clone https://github.com/magicmonty/bash-git-prompt.git $HOME/.bash-git-prompt --depth=1
     cat configurations/bash_git_prompt/bashrc >> $HOME/.bashrc
 }
 # Install_phpstorm () {
