@@ -70,8 +70,8 @@ done
 while true; do
 read -p "Do you wish to install apache or nginx? [a,n]" apachenginx
     case $apachenginx in
-        n ) Install_apache; break;;
-        a ) Install_nginx; break;;
+        a ) Install_apache; break;;
+        n ) Install_nginx; break;;
     esac
 done
 
