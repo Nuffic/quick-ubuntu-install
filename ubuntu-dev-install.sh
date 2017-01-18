@@ -1,12 +1,12 @@
 #!/bin/sh
 Install_apache () {
     sudo apt-get install -y libapache2-mod-php5.6
-    sudo cp ./configurations/php/30-development.ini /etc/php/5.6/apache2/conf.d/
+    sudo cp -r ./configurations/php/30-development.ini /etc/php/5.6/apache2/conf.d/
 }
 
 Install_nginx () {
     sudo apt-get install -y nginx 
-    sudo cp ./configurations/php/30-development.ini /etc/php/5.6/fpm/conf.d/
+    sudo cp -r ./configurations/php/30-development.ini /etc/php/5.6/fpm/conf.d/
 }
 
 Install_st3 () {
@@ -39,7 +39,7 @@ sudo add-apt-repository -y ppa:ondrej/mysql-5.6
 sudo apt-add-repository -y ppa:jtaylor/keepass
 sudo apt-get update
 
-sudo apt-get install -y keepass2 guake php5.6-dev php5.6-mysql php5.6-cli php5.6-fpm php5.6-curl php5.6-zip php5.6-soap php5.6-intl php5.6-json php5.6-xml php5.6-mcrypt php5.6-mbstring php5.6-bcmath php-pear mysql-server-5.6 sni-qt sni-qt:i386 git git-flow xdotool
+sudo apt-get install -y git git-flow keepass2 guake php5.6-dev php5.6-mysql php5.6-cli php5.6-fpm php5.6-curl php5.6-zip php5.6-soap php5.6-intl php5.6-json php5.6-xml php5.6-mcrypt php5.6-mbstring php5.6-bcmath php-pear mysql-server-5.6 sni-qt sni-qt:i386 xdotool mysql-server-5.6
 
 #install software that is downloadable from the internet
 wget https://repo.skype.com/latest/skypeforlinux-64-alpha.deb
@@ -57,7 +57,7 @@ rm skypeforlinux-64-alpha.deb google-chrome-stable_current_amd64.deb dropbox.deb
 if [ ! -d $HOME/.config/autostart ]; then
     mkdir -p $HOME/.config/autostart
 fi
-cp ./configurations/autostart $HOME/.config/autostart
+cp -r ./configurations/autostart $HOME/.config
 
 while true; do
     read -p "Do you wish to install Sublime text 3? [y,n]" yn
